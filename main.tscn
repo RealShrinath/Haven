@@ -117,7 +117,7 @@ texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_hwlf6")
 animation = &"Right Walk"
 autoplay = "Right Walk"
-frame_progress = 0.016838275
+frame_progress = 0.8664314
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1793372769]
 position = Vector2(1.5, 0.5)
@@ -142,9 +142,9 @@ texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_7tu1i")
 animation = &"Left Walk"
 autoplay = "Left Walk"
-frame_progress = 0.89584553
+frame_progress = 0.24309553
 
 [node name="Coin" type="Sprite2D" parent="." unique_id=1450787910]
-position = Vector2(665, 761)
+position = Vector2(565, 568)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("13_82xsv")
