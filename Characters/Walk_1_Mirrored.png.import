@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bin6fngwnmsaf"
-path="res://.godot/imported/Front.png-2d2dbed45d1d12faf4c1bf0fb727921c.ctex"
+uid="uid://d1d34xnfooes4"
+path="res://.godot/imported/Walk_1_Mirrored.png-9e5cd62072469f3cd03c93817c3633df.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Front.png"
-dest_files=["res://.godot/imported/Front.png-2d2dbed45d1d12faf4c1bf0fb727921c.ctex"]
+source_file="res://Characters/Walk_1_Mirrored.png"
+dest_files=["res://.godot/imported/Walk_1_Mirrored.png-9e5cd62072469f3cd03c93817c3633df.ctex"]
 
 [params]
 

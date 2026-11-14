@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dk543tv355dno"
-path="res://.godot/imported/Bricks.png-cadb24cfd05dd03bd44167bcc73180f1.ctex"
+uid="uid://co6vpuut4pqsk"
+path="res://.godot/imported/Stand_Mirrored.png-0f5d830ebc7c4bd709820e5d4758f3e1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Bricks.png"
-dest_files=["res://.godot/imported/Bricks.png-cadb24cfd05dd03bd44167bcc73180f1.ctex"]
+source_file="res://Characters/Stand_Mirrored.png"
+dest_files=["res://.godot/imported/Stand_Mirrored.png-0f5d830ebc7c4bd709820e5d4758f3e1.ctex"]
 
 [params]
 

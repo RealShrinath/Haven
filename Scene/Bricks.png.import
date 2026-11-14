@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://lym3vjb6rw26"
-path="res://.godot/imported/Planks.png-d4163433f95e734e9922086409c22c45.ctex"
+uid="uid://dk543tv355dno"
+path="res://.godot/imported/Bricks.png-93a594558377cca3ab3ddaedcca80977.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Planks.png"
-dest_files=["res://.godot/imported/Planks.png-d4163433f95e734e9922086409c22c45.ctex"]
+source_file="res://Scene/Bricks.png"
+dest_files=["res://.godot/imported/Bricks.png-93a594558377cca3ab3ddaedcca80977.ctex"]
 
 [params]
 
