@@ -2,9 +2,17 @@
 
 [ext_resource type="Texture2D" uid="uid://by1dkpb2cxilf" path="res://Scene/Grass.png" id="1_h2yge"]
 [ext_resource type="Texture2D" uid="uid://dk543tv355dno" path="res://Scene/Bricks.png" id="2_1bvp3"]
-[ext_resource type="Texture2D" path="res://Scene/Planks.png" id="3_lquwl"]
+[ext_resource type="Texture2D" uid="uid://lym3vjb6rw26" path="res://Scene/Planks.png" id="3_lquwl"]
 [ext_resource type="Texture2D" uid="uid://bya30mljumb3n" path="res://Characters/Walk_1.png" id="4_lquwl"]
 [ext_resource type="Texture2D" uid="uid://2n6gswlir3xh" path="res://Characters/Walk_2.png" id="5_7mycd"]
+[ext_resource type="Texture2D" uid="uid://c1hombnlg1b82" path="res://Characters/Back.png" id="6_ycdy4"]
+[ext_resource type="Texture2D" uid="uid://bgqfqei2nuic5" path="res://Characters/Back_Mirrored.png" id="7_w48qg"]
+[ext_resource type="Texture2D" uid="uid://bin6fngwnmsaf" path="res://Characters/Front.png" id="8_vivmo"]
+[ext_resource type="Texture2D" uid="uid://c2qjbq5khppm2" path="res://Characters/Front_Mirrored.png" id="9_2cqfq"]
+[ext_resource type="Texture2D" uid="uid://d1d34xnfooes4" path="res://Characters/Walk_1_Mirrored.png" id="10_yaehf"]
+[ext_resource type="Texture2D" uid="uid://co6vpuut4pqsk" path="res://Characters/Stand_Mirrored.png" id="11_074og"]
+[ext_resource type="Texture2D" uid="uid://ctgs1fh3e8ddt" path="res://Characters/Walk_2_Mirrored.png" id="12_cegan"]
+[ext_resource type="Texture2D" uid="uid://bnmr70mubbgvi" path="res://Scene/Coin.png" id="13_82xsv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7mycd"]
 texture = ExtResource("1_h2yge")
@@ -46,23 +54,97 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ob1uy"]
 size = Vector2(29, 39)
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_nt6kf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_ycdy4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_w48qg")
+}],
+"loop": 1,
+"name": &"Up Walk",
+"speed": 4.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fqwxs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_vivmo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_2cqfq")
+}],
+"loop": 1,
+"name": &"Down Walk",
+"speed": 4.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7tu1i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_yaehf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_074og")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_cegan")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_074og")
+}],
+"loop": 1,
+"name": &"Left Walk",
+"speed": 4.0
+}]
+
 [node name="Main" type="Node2D" unique_id=409521346]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1952705012]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1234478184]
-tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAQAAAAAAAAAAAAEAAIAAAAAAAAAAAADAAIAAAAAAAAAAAADAAMAAAAAAAAAAAACAAMAAAAAAAAAAAADAAQAAAAAAAAAAAAEAAQAAAAAAAAAAAAFAAQAAAAAAAAAAAAGAAQAAAAAAAAAAAACAAYAAAAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAQAAAAAAAAAAAAEAAIAAgAAAAAAAAADAAIAAgAAAAAAAAADAAMAAgAAAAAAAAACAAMAAgAAAAAAAAADAAQAAgAAAAAAAAAEAAQAAgAAAAAAAAAFAAQAAgAAAAAAAAAGAAQAAgAAAAAAAAACAAYAAAAAAAAAAAABAAAAAQAAAAAAAAACAAAAAgAAAAAAAAADAAAAAgAAAAAAAAAEAAAAAgAAAAAAAAAFAAAAAgAAAAAAAAAFAAEAAgAAAAAAAAAFAAIAAgAAAAAAAAAFAAMAAgAAAAAAAAAGAAAAAgAAAAAAAAAGAAEAAgAAAAAAAAAGAAIAAgAAAAAAAAAGAAMAAgAAAAAAAAAEAAEAAgAAAAAAAAADAAEAAgAAAAAAAAACAAEAAgAAAAAAAAABAAEAAQAAAAAAAAABAAIAAQAAAAAAAAABAAMAAQAAAAAAAAABAAQAAQAAAAAAAAACAAIAAgAAAAAAAAACAAQAAgAAAAAAAAAEAAMAAgAAAAAAAAADAAUAAQAAAAAAAAACAAUAAQAAAAAAAAABAAUAAQAAAAAAAAAAAAUAAAAAAAAAAAABAAYAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAcAAAAAAAAAAAABAAcAAAAAAAAAAAADAAYAAAAAAAAAAAAEAAYAAAAAAAAAAAAFAAYAAAAAAAAAAAAFAAUAAQAAAAAAAAAGAAUAAQAAAAAAAAAGAAYAAAAAAAAAAAAEAAUAAQAAAAAAAAACAAcAAAAAAAAAAAADAAcAAAAAAAAAAAAEAAcAAAAAAAAAAAAFAAcAAAAAAAAAAAAGAAcAAAAAAAAAAAA=")
 tile_set = SubResource("TileSet_hwlf6")
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=1456598103]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player" unique_id=619935771]
+[node name="AnimatedSprite2D Right" type="AnimatedSprite2D" parent="Player" unique_id=619935771]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_hwlf6")
 animation = &"Right Walk"
 autoplay = "Right Walk"
-frame_progress = 0.9373022
+frame_progress = 0.016838275
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1793372769]
 position = Vector2(1.5, 0.5)
 shape = SubResource("RectangleShape2D_ob1uy")
+
+[node name="AnimatedSprite2D Up" type="AnimatedSprite2D" parent="Player" unique_id=1081225984]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_nt6kf")
+animation = &"Up Walk"
+autoplay = "Up Walk"
+frame_progress = 0.69338346
+
+[node name="AnimatedSprite2D Down" type="AnimatedSprite2D" parent="Player" unique_id=990727091]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_fqwxs")
+animation = &"Down Walk"
+autoplay = "Down Walk"
+frame_progress = 0.9056849
+
+[node name="AnimatedSprite2D Left" type="AnimatedSprite2D" parent="Player" unique_id=2019949870]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_7tu1i")
+animation = &"Left Walk"
+autoplay = "Left Walk"
+frame_progress = 0.89584553
+
+[node name="Coin" type="Sprite2D" parent="." unique_id=1450787910]
+position = Vector2(665, 761)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("13_82xsv")
