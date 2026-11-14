@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 extends AnimatedSprite2D
+=======
+extends CharacterBody2D
+>>>>>>> 48e9d44 (final stuff)
 
 
 const SPEED = 300.0
