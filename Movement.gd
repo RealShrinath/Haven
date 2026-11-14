@@ -1,12 +1,8 @@
-<<<<<<< HEAD:player.gd
-<<<<<<< HEAD
+
 extends AnimatedSprite2D
-=======
+
 extends CharacterBody2D
->>>>>>> 48e9d44 (final stuff)
-=======
-extends CharacterBody2D
->>>>>>> 2377571fc3c432e3594f836069c8a679e01d1ac4:Movement.gd
+
 
 
 const SPEED = 300.0
