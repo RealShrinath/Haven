@@ -67,7 +67,7 @@ tile_set = SubResource("TileSet_hwlf6")
 script = ExtResource("4_5vw27")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1211164928]
-position = Vector2(71.5, -43)
+position = Vector2(-54, -41)
 shape = SubResource("RectangleShape2D_7d3rj")
 
 [node name="AnimatedSprite2D Left" type="AnimatedSprite2D" parent="Player" unique_id=2019949870]
