@@ -4,7 +4,7 @@
 position = Vector2(365, 284)
 
 [node name="Panel" type="Panel" parent="." unique_id=1619621429]
-offset_left = -200.0
-offset_top = -183.0
-offset_right = 195.0
-offset_bottom = 341.0
+offset_left = 452.0
+offset_top = -72.0
+offset_right = 847.0
+offset_bottom = 452.0
