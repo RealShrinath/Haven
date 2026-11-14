@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://bu50e48s7afr6"]
+
+[ext_resource type="Texture2D" uid="uid://2n6gswlir3xh" path="res://Characters/Walk_2.png" id="1_ud23o"]
+[ext_resource type="Texture2D" uid="uid://40x5m6mvijmx" path="res://Characters/Stand.png" id="2_yt1fb"]
+[ext_resource type="Texture2D" uid="uid://bya30mljumb3n" path="res://Characters/Walk_1.png" id="3_aadyx"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7d3rj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ud23o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_yt1fb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_aadyx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_yt1fb")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Game" type="Node2D" unique_id=1170875492]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=160947011]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_7d3rj")
+frame_progress = 0.6398306

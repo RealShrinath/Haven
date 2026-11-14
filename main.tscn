@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://dxoilhdihfxbl"]
 
-[ext_resource type="Texture2D" uid="uid://by1dkpb2cxilf" path="res://Grass.png" id="1_h2yge"]
-[ext_resource type="Texture2D" uid="uid://dk543tv355dno" path="res://Bricks.png" id="2_1bvp3"]
-[ext_resource type="Texture2D" uid="uid://lym3vjb6rw26" path="res://Planks.png" id="3_lquwl"]
+[ext_resource type="Texture2D" uid="uid://by1dkpb2cxilf" path="res://Scene/Grass.png" id="1_h2yge"]
+[ext_resource type="Texture2D" uid="uid://dk543tv355dno" path="res://Scene/Bricks.png" id="2_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://lym3vjb6rw26" path="res://Scripts/Planks.png" id="3_lquwl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7mycd"]
 texture = ExtResource("1_h2yge")
@@ -28,8 +28,6 @@ sources/1 = SubResource("TileSetAtlasSource_272bh")
 sources/2 = SubResource("TileSetAtlasSource_5vw27")
 
 [node name="Main" type="Node2D" unique_id=409521346]
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1952705012]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1234478184]
 tile_map_data = PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0)
