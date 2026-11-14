@@ -1,8 +1,10 @@
-[gd_scene format=3 uid="uid://dxoilhdihfxbl"]
+[gd_scene format=4 uid="uid://dxoilhdihfxbl"]
 
 [ext_resource type="Texture2D" uid="uid://by1dkpb2cxilf" path="res://Scene/Grass.png" id="1_h2yge"]
 [ext_resource type="Texture2D" uid="uid://dk543tv355dno" path="res://Scene/Bricks.png" id="2_1bvp3"]
-[ext_resource type="Texture2D" uid="uid://lym3vjb6rw26" path="res://Scripts/Planks.png" id="3_lquwl"]
+[ext_resource type="Texture2D" path="res://Scene/Planks.png" id="3_lquwl"]
+[ext_resource type="Texture2D" uid="uid://bya30mljumb3n" path="res://Characters/Walk_1.png" id="4_lquwl"]
+[ext_resource type="Texture2D" uid="uid://2n6gswlir3xh" path="res://Characters/Walk_2.png" id="5_7mycd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7mycd"]
 texture = ExtResource("1_h2yge")
@@ -27,8 +29,40 @@ sources/0 = SubResource("TileSetAtlasSource_7mycd")
 sources/1 = SubResource("TileSetAtlasSource_272bh")
 sources/2 = SubResource("TileSetAtlasSource_5vw27")
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_hwlf6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_lquwl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_7mycd")
+}],
+"loop": 1,
+"name": &"Right Walk",
+"speed": 4.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ob1uy"]
+size = Vector2(29, 39)
+
 [node name="Main" type="Node2D" unique_id=409521346]
 
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1952705012]
+
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1234478184]
-tile_map_data = PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAQAAAAAAAAAAAAEAAIAAAAAAAAAAAADAAIAAAAAAAAAAAADAAMAAAAAAAAAAAACAAMAAAAAAAAAAAADAAQAAAAAAAAAAAAEAAQAAAAAAAAAAAAFAAQAAAAAAAAAAAAGAAQAAAAAAAAAAAACAAYAAAAAAAAAAAA=")
 tile_set = SubResource("TileSet_hwlf6")
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=1456598103]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player" unique_id=619935771]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_hwlf6")
+animation = &"Right Walk"
+autoplay = "Right Walk"
+frame_progress = 0.9373022
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1793372769]
+position = Vector2(1.5, 0.5)
+shape = SubResource("RectangleShape2D_ob1uy")
